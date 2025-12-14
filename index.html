@@ -326,9 +326,9 @@
 
             // LeetCode Counter Animation
             const leetcodeCounter = document.getElementById('leetcode-counter');
-            const targetCount = 191;
+            const targetCount = 221;
             let currentCount = 0;
-            const increment = targetCount / 100;
+            const increment = targetCount / 10;
 
             function updateCounter() {
                 if (currentCount < targetCount) {
@@ -357,7 +357,7 @@
                     labels: ['Easy', 'Medium', 'Hard'],
                     datasets: [{
                         label: 'Problems Solved',
-                        data: [109, 73, 9], // Updated data for 100+
+                        data: [128, 84, 9], // Updated data for 100+
                         backgroundColor: [
                             '#16a34a', // Green 600
                             '#2563eb', // Blue 600
@@ -448,7 +448,7 @@
                 {
                     id: 'dino-clone',
                     title: 'Chrome Dino Clone (T-Rex Game)',
-                    repoName: 'Trex-Game',
+                    repoName: 'Trex-Game',  
                     liveDemoUrl: 'https://sanjai0412.github.io/Trex-Game/',
                     shortDesc: 'A faithful recreation of Google Chrome’s offline dinosaur game, implementing jump physics and scaling difficulty.',
                     tags: ['HTML5 Canvas', 'JavaScript', 'Game Physics'],
