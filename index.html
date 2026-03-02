@@ -166,6 +166,8 @@
                     class="bg-white p-6 rounded-lg shadow-sm border transition-all duration-300 hover:shadow-lg hover:scale-[1.02]">
                     <h3 class="text-xl font-semibold text-slate-800">Languages & Web</h3>
                     <div class="mt-4 flex flex-wrap gap-2">
+                        <span class="tech-tag px-3 py-1 rounded-full">Java</span>
+                        <span class="tech-tag px-3 py-1 rounded-full">SQL</span>
                         <span class="tech-tag px-3 py-1 rounded-full">JavaScript</span>
                         <span class="tech-tag px-3 py-1 rounded-full">Python</span>
                         <span class="tech-tag px-3 py-1 rounded-full">HTML5</span>
@@ -176,6 +178,8 @@
                     class="bg-white p-6 rounded-lg shadow-sm border transition-all duration-300 hover:shadow-lg hover:scale-[1.02]">
                     <h3 class="text-xl font-semibold text-slate-800">Backend & Database</h3>
                     <div class="mt-4 flex flex-wrap gap-2">
+                        <span class="tech-tag px-3 py-1 rounded-full">Java Jersey</span>
+                        <span class="tech-tag px-3 py-1 rounded-full">PostgreSQL</span>
                         <span class="tech-tag px-3 py-1 rounded-full">Node.js</span>
                         <span class="tech-tag px-3 py-1 rounded-full">Express.js</span>
                         <span class="tech-tag px-3 py-1 rounded-full">MongoDB</span>
@@ -326,7 +330,7 @@
 
             // LeetCode Counter Animation
             const leetcodeCounter = document.getElementById('leetcode-counter');
-            const targetCount = 221;
+            const targetCount = 237;
             let currentCount = 0;
             const increment = targetCount / 50;
 
@@ -397,6 +401,43 @@
             // Project Data
             const GITHUB_USERNAME = 'Sanjai0412';
             const projects = [
+                {
+    id: 'google-split',
+    title: 'Google Split – Expense Sharing Backend System',
+    repoName: 'Google-split',
+    liveDemoUrl: '#', // No live demo if backend only
+    shortDesc: 'REST-based backend system for managing group expenses, settlements, and balance calculations.',
+    tags: ['Java', 'Jersey', 'PostgreSQL', 'REST APIs'],
+    details: `
+        <p class="text-slate-600 mb-4">
+        A backend-focused system built to manage shared group expenses and settlements using REST architecture.
+        </p>
+        <ul class="space-y-3 text-slate-700 list-disc list-inside">
+            <li>Built RESTful APIs for group management, expense tracking, and settlements.</li>
+            <li>Structured the system using layered architecture (DAO, Service, Resource).</li>
+            <li>Designed normalized PostgreSQL schema with foreign key constraints.</li>
+            <li>Implemented automated balance calculation logic.</li>
+        </ul>
+    `
+},
+{
+    id: 'taxi-booking',
+    title: 'Taxi Booking Backend System',
+    repoName: 'taxibooking',
+    liveDemoUrl: '#', // Backend only
+    shortDesc: 'RESTful backend system handling ride lifecycle, driver assignment, and state transitions.',
+    tags: ['Java', 'Jersey', 'PostgreSQL', 'SQL'],
+    details: `
+        <p class="text-slate-600 mb-4">
+        Backend system implementing the complete ride lifecycle from booking to completion.
+        </p>
+        <ul class="space-y-3 text-slate-700 list-disc list-inside">
+            <li>Developed APIs for ride booking, authentication, and driver assignment.</li>
+            <li>Implemented controlled ride state transitions to maintain data integrity.</li>
+            <li>Used SQL JOINs and aggregate queries for ride analytics.</li>
+        </ul>
+    `
+},
                 {
                     id: 'chat-app',
                     title: 'Real-time Chat App',
