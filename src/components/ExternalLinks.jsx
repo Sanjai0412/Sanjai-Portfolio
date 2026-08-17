@@ -13,6 +13,7 @@ const ExternalLinks = ({ githubLink, openLink, docsLink }) => {
           target="_blank"
           rel="noopener noreferrer"
           title="GitHub Repository"
+          onClick={(e) => e.stopPropagation()}
         >
           <GitHubIcon
             sx={{
@@ -29,7 +30,8 @@ const ExternalLinks = ({ githubLink, openLink, docsLink }) => {
           target="_blank"
           rel="noopener noreferrer"
           title="API Documentation"
-          style={{ marginLeft: "10px" }}
+          style={{ marginLeft: "12px" }}
+          onClick={(e) => e.stopPropagation()}
         >
           <DescriptionRoundedIcon
             sx={{
@@ -46,10 +48,12 @@ const ExternalLinks = ({ githubLink, openLink, docsLink }) => {
           target="_blank"
           rel="noopener noreferrer"
           title="Live Demo"
+          style={{ marginLeft: "12px" }}
+          onClick={(e) => e.stopPropagation()}
         >
           <OpenInBrowserIcon
             sx={{
-              fontSize: 25,
+              fontSize: 24,
               color: "inherit",
             }}
           />

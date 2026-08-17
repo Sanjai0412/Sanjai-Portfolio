@@ -153,12 +153,23 @@ const Projects = () => {
                 <div
                   style={{
                     color: "var(--green-bright)",
-                    fontSize: "12px",
-                    marginTop: "8px",
+                    fontSize: "15px",
+                    fontWeight: "bold",
+                    marginTop: "12px",
+                    marginBottom: "12px",
                     fontFamily: "NTR, sans-serif",
+                    letterSpacing: "0.3px",
+                    transition: "color 0.1s ease-in-out",
+                    cursor: "pointer",
+                  }}
+                  onMouseEnter={(e) => {
+                    e.target.style.color = "var(--lightest-slate)";
+                  }}
+                  onMouseLeave={(e) => {
+                    e.target.style.color = "var(--green-bright)";
                   }}
                 >
-                  Click for architecture details →
+                  Click for details →
                 </div>
                 <div className="card-tech">{project.techStack}</div>
               </li>
@@ -181,20 +192,20 @@ const Projects = () => {
             </Modal.Title>
           </Modal.Header>
           <Modal.Body>
-            <p style={{ color: "var(--slate)", fontSize: "15px" }}>
+            <p style={{ color: "var(--slate)", fontSize: "17px", lineHeight: "1.6" }}>
               {selectedProject.shortDesc}
             </p>
-            <h6 style={{ color: "var(--lightest-slate)", marginTop: "16px" }}>
+            <h6 style={{ color: "var(--lightest-slate)", fontSize: "18px", marginTop: "18px", marginBottom: "12px", fontWeight: "bold" }}>
               Key Engineering & Architecture Highlights:
             </h6>
             <ul style={{ color: "var(--slate)", paddingLeft: "20px" }}>
               {selectedProject.details.map((detail, idx) => (
-                <li key={idx} style={{ marginBottom: "8px", fontSize: "14px" }}>
+                <li key={idx} style={{ marginBottom: "10px", fontSize: "16px", lineHeight: "1.6" }}>
                   {detail}
                 </li>
               ))}
             </ul>
-            <div style={{ marginTop: "16px" }}>
+            <div style={{ marginTop: "18px", fontSize: "16px" }}>
               <strong>Tech Stack: </strong>
               <span style={{ color: "var(--green-bright)" }}>
                 {selectedProject.techStack}

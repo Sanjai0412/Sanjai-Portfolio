@@ -68,9 +68,9 @@ const Education = () => {
                     display: "inline-block",
                     backgroundColor: "var(--light-navy)",
                     color: "var(--green-bright)",
-                    padding: "2px 10px",
+                    padding: "3px 12px",
                     borderRadius: "4px",
-                    fontSize: "12px",
+                    fontSize: "14px",
                     fontFamily: "NTR, sans-serif",
                     fontWeight: "bold",
                     marginBottom: "8px",
@@ -83,7 +83,7 @@ const Education = () => {
                 <div
                   style={{
                     color: "var(--lightest-slate)",
-                    fontSize: "18px",
+                    fontSize: "20px",
                     fontWeight: "bold",
                     marginTop: "4px",
                     display: "flex",
@@ -91,14 +91,14 @@ const Education = () => {
                     gap: "8px",
                   }}
                 >
-                  <SchoolRoundedIcon style={{ color: "var(--slate)", fontSize: 20 }} />
+                  <SchoolRoundedIcon style={{ color: "var(--slate)", fontSize: 22 }} />
                   {item.degree}
                 </div>
 
                 <div
                   style={{
                     color: "var(--slate)",
-                    fontSize: "14px",
+                    fontSize: "16px",
                     marginTop: "4px",
                   }}
                 >

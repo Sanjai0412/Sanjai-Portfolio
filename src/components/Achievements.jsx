@@ -45,7 +45,7 @@ const Achievements = () => {
               </div>
 
               <div style={{ fontSize: "56px", fontWeight: "bold", color: "var(--green-bright)", lineHeight: "1.1" }}>
-                237+
+                267+
               </div>
               <div style={{ color: "var(--slate)", fontSize: "16px", marginTop: "4px", marginBottom: "24px" }}>
                 Problems Solved & Growing Daily

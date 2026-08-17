@@ -64,7 +64,7 @@ const Skills = () => {
                           color: "var(--slate)",
                           padding: "6px 12px",
                           borderRadius: "16px",
-                          fontSize: "13px",
+                          fontSize: "16px",
                           marginRight: "8px",
                           marginBottom: "8px",
                           border: "1px solid var(--lightest-navy)",

@@ -94,25 +94,23 @@
   font-size: 20px;
 }
 
-.github-icon {
-  margin-top: 6px;
-}
-.github-icon:hover {
-  color: var(--green-bright);
-}
-
-.docs-icon {
-  margin-top: 6px;
-}
-.docs-icon:hover {
-  color: var(--green-bright);
+.external-links a {
+  color: var(--lightest-slate);
+  transition: color 0.2s ease;
+  display: inline-flex;
+  align-items: center;
 }
 
+.github-icon,
+.docs-icon,
 .open-icon {
-  margin-left: 10px;
+  color: var(--lightest-slate) !important;
 }
+
+.github-icon:hover,
+.docs-icon:hover,
 .open-icon:hover {
-  color: var(--green-bright);
+  color: var(--green-bright) !important;
 }
 
 .card-title {

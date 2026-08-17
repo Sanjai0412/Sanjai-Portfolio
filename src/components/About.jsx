@@ -5,7 +5,7 @@ import FadeInSection from "./FadeInSection";
 const About = () => {
   const one = (
     <p>
-      I am a <b>Software Engineer</b> pursuing my <b>Master of Computer Applications (MCA)</b> at Dr. S.N.S. Rajalakshmi College of Arts and Science, Coimbatore. I hold a B.Sc in Computer Science from Jamal Mohamed College, Trichy.
+      I am a <b>Software Engineer</b> and a recent Master of Computer Applications (MCA) graduate from Dr. S.N.S. Rajalakshmi College of Arts and Science, Coimbatore. I hold a B.Sc in Computer Science from Jamal Mohamed College, Trichy.
     </p>
   );
   const two = (
