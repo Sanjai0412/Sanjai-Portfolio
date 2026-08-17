@@ -1,0 +1,15 @@
+:root {
+  --dark-navy: #070c13;
+  --navy: #0e1727;
+  --light-navy: #101929;
+  --lightest-navy: #1F2B3B;
+  --navy-shadow: rgba(5, 8, 13, 0.85);
+  --slate: #98A7B8;
+  --light-slate: #657486;
+  --lightest-slate: #d1d4d7;
+  --white: #c7c9ca;
+  --accent: #1677FF;
+  --green-bright: #3D91FF;
+  --green-tint: rgba(61, 145, 255, 0.12);
+  --soft-accent: #A8D0FF;
+}
