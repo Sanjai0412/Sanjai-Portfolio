@@ -15,6 +15,7 @@ const projectsList = [
       "Java 17, Jersey JAX-RS, PostgreSQL, React 18, Cloudinary, Vercel, Railway",
     link: "https://github.com/Sanjai0412/pingx",
     open: "https://pingx-sanjaii04.vercel.app/",
+    docs: "https://github.com/Sanjai0412/pingx#readme",
     details: [
       "Activity Feed & Infinite Scroll: Activity-based timeline with performance-optimized IntersectionObserver pagination (usePaginatedFeed) supporting original tweets, retweets, and quote tweets.",
       "Database Indexing Optimization: Reduced feed generation and notification query latency using PostgreSQL B-tree composite indexes on high-throughput columns (user_id, created_at DESC, followed_id).",
@@ -30,7 +31,7 @@ const projectsList = [
     techStack:
       "Node.js, Express.js, PostgreSQL, JWT, Brevo API, Bcrypt.js, Railway",
     link: "https://github.com/Sanjai0412/auth-service",
-    open: "https://auth-service-production-4ccd.up.railway.app/auth",
+    open: null,
     details: [
       "Dual-Token Hybrid Security: Issues short-lived 15-minute in-memory access tokens alongside 7-day stateful refresh tokens stored in HttpOnly cookies and PostgreSQL.",
       "Database Indexing Optimization: Fast user authentication, OTP validation, and session lookup using targeted PostgreSQL B-tree indexes.",
@@ -143,6 +144,7 @@ const Projects = () => {
                   <ExternalLinks
                     githubLink={project.link}
                     openLink={project.open}
+                    docsLink={project.docs}
                   />
                 </div>
 
@@ -208,6 +210,16 @@ const Projects = () => {
                 rel="noopener noreferrer"
               >
                 Live Demo ↗
+              </Button>
+            )}
+            {selectedProject.docs && (
+              <Button
+                variant="outline-success"
+                href={selectedProject.docs}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                API Docs
               </Button>
             )}
             {selectedProject.link && (

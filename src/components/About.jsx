@@ -45,7 +45,7 @@ const About = () => {
             {two}
           </div>
           <div className="about-image">
-            <img alt="Sanjaikanth T." src={"/profile_original.jpg"} />
+            <img alt="Sanjaikanth T." src={"/Sanjai-in-suit.jpeg"} />
           </div>
         </div>
       </FadeInSection>

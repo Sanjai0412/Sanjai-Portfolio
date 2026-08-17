@@ -101,8 +101,18 @@
   color: var(--green-bright);
 }
 
+.docs-icon {
+  margin-top: 6px;
+}
+.docs-icon:hover {
+  color: var(--green-bright);
+}
+
 .open-icon {
   margin-left: 10px;
+}
+.open-icon:hover {
+  color: var(--green-bright);
 }
 
 .card-title {

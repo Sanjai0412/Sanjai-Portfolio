@@ -1,6 +1,6 @@
 import React from "react";
 import FadeInSection from "./FadeInSection";
-import CodeRoundedIcon from "@mui/icons-material/CodeRounded";
+import LeetCodeIcon from "./LeetCodeIcon";
 
 const Achievements = () => {
   return (
@@ -38,7 +38,7 @@ const Achievements = () => {
                   marginBottom: "12px",
                 }}
               >
-                <CodeRoundedIcon style={{ color: "var(--green-bright)", fontSize: 32 }} />
+                <LeetCodeIcon style={{ color: "var(--green-bright)", fontSize: 32 }} />
                 <h3 style={{ margin: 0, color: "var(--lightest-slate)", fontSize: "22px" }}>
                   LeetCode Progress
                 </h3>
@@ -52,7 +52,7 @@ const Achievements = () => {
               </div>
 
               <a
-                href="https://leetcode.com/u/Sanjai_04/"
+                href="https://leetcode.com/u/Sanjaii04/"
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{

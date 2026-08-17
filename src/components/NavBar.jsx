@@ -3,7 +3,7 @@ import { Container, Nav, Navbar } from "react-bootstrap";
 import EmailRoundedIcon from "@mui/icons-material/EmailRounded";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
-import CodeRoundedIcon from "@mui/icons-material/CodeRounded";
+import LeetCodeIcon from "./LeetCodeIcon";
 import "../styles/NavBar.css";
 
 const NavBar = () => {
@@ -62,8 +62,8 @@ const NavBar = () => {
             >
               <LinkedInIcon style={{ fontSize: 21 }} />
             </Nav.Link>
-            <Nav.Link href="https://leetcode.com/u/Sanjai_04/" target="_blank" title="LeetCode">
-              <CodeRoundedIcon style={{ fontSize: 22 }} />
+            <Nav.Link href="https://leetcode.com/u/Sanjaii04/" target="_blank" title="LeetCode">
+              <LeetCodeIcon style={{ fontSize: 20 }} />
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>
