@@ -3,11 +3,12 @@ import "../styles/Projects.css";
 import FolderOpenRoundedIcon from "@mui/icons-material/FolderOpenRounded";
 import FadeInSection from "./FadeInSection";
 import ExternalLinks from "./ExternalLinks";
-import { Modal, Button } from "react-bootstrap";
+import { Modal, Button, Carousel } from "react-bootstrap";
 
 const projectsList = [
   {
     id: "pingx",
+    image: "/projects/pingx.png",
     title: "PingX – Full-Stack Social Media Platform",
     shortDesc:
       "A Twitter/X-inspired full-stack platform featuring activity feeds, IntersectionObserver infinite scroll, real-time notifications, and in-memory JWT authentication.",
@@ -69,6 +70,7 @@ const projectsList = [
   },
   {
     id: "chat-app",
+    image: "/projects/chat.png",
     title: "Real-time Chat App",
     shortDesc:
       "A full-stack chat application supporting real-time messaging using WebSockets and the MERN stack.",
@@ -83,6 +85,7 @@ const projectsList = [
   },
   {
     id: "snake-game",
+    image: "/projects/snake.png",
     title: "Classic Snake Game",
     shortDesc:
       "A complete snake game clone with high score tracking, sound effects, and responsive controls, built with pure JavaScript.",
@@ -97,6 +100,7 @@ const projectsList = [
   },
   {
     id: "brick-breaker",
+    image: "/projects/brick-breakers.png",
     title: "Brick Breaker Game",
     shortDesc:
       "An interactive brick-breaker game with polished UX, audio feedback, and precise collision detection using HTML5 Canvas.",
@@ -110,6 +114,10 @@ const projectsList = [
     ],
   },
 ];
+
+const spotlightIds = ["pingx", "chat-app", "snake-game", "brick-breaker"];
+const spotlightProjects = projectsList.filter((p) => spotlightIds.includes(p.id));
+const otherProjects = projectsList.filter((p) => !spotlightIds.includes(p.id));
 
 const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null);
@@ -128,9 +136,71 @@ const Projects = () => {
         </a>
       </div>
 
+      {/* Featured Spotlight Carousel */}
+      <FadeInSection>
+        <div className="spotlight-carousel-container">
+          <Carousel interval={null} pause="hover" className="spotlight-carousel">
+            {spotlightProjects.map((project) => (
+              <Carousel.Item key={project.id}>
+                <div
+                  className="spotlight-slide"
+                  onClick={() => setSelectedProject(project)}
+                >
+                  {project.image ? (
+                    <div className="spotlight-image-backdrop">
+                      <img src={project.image} alt={project.title} className="spotlight-bg-image" />
+                      <div className="spotlight-image-overlay">
+                        <h2 className="spotlight-title">{project.title}</h2>
+                        <p className="spotlight-desc">{project.shortDesc}</p>
+                        <div className="spotlight-details-hint">
+                          Click for details →
+                        </div>
+                        <div
+                          className="spotlight-links"
+                          onClick={(e) => e.stopPropagation()}
+                        >
+                          <ExternalLinks
+                            githubLink={project.link}
+                            openLink={project.open}
+                            docsLink={project.docs}
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  ) : (
+                    <div className="spotlight-content-fallback">
+                      <div className="folder-icon mb-3">
+                        <FolderOpenRoundedIcon sx={{ fontSize: 45 }} />
+                      </div>
+                      <h2 className="spotlight-title">{project.title}</h2>
+                      <p className="spotlight-desc">{project.shortDesc}</p>
+                      <div className="spotlight-tech">{project.techStack}</div>
+                      <div className="spotlight-details-hint">
+                        Click for details →
+                      </div>
+                      <div
+                        className="spotlight-links"
+                        onClick={(e) => e.stopPropagation()}
+                      >
+                        <ExternalLinks
+                          githubLink={project.link}
+                          openLink={project.open}
+                          docsLink={project.docs}
+                        />
+                      </div>
+                    </div>
+                  )}
+                </div>
+              </Carousel.Item>
+            ))}
+          </Carousel>
+        </div>
+      </FadeInSection>
+
+      {/* Other Projects Grid */}
       <div className="project-container">
         <ul className="projects-grid">
-          {projectsList.map((project, i) => (
+          {otherProjects.map((project, i) => (
             <FadeInSection key={i} delay={(i + 1) * 100 + "ms"}>
               <li
                 className="projects-card"
@@ -151,22 +221,13 @@ const Projects = () => {
                 <div className="card-title">{project.title}</div>
                 <div className="card-desc">{project.shortDesc}</div>
                 <div
+                  className="spotlight-details-hint"
                   style={{
-                    color: "var(--green-bright)",
                     fontSize: "15px",
                     fontWeight: "bold",
                     marginTop: "12px",
                     marginBottom: "12px",
-                    fontFamily: "NTR, sans-serif",
-                    letterSpacing: "0.3px",
-                    transition: "color 0.1s ease-in-out",
-                    cursor: "pointer",
-                  }}
-                  onMouseEnter={(e) => {
-                    e.target.style.color = "var(--lightest-slate)";
-                  }}
-                  onMouseLeave={(e) => {
-                    e.target.style.color = "var(--green-bright)";
+                    textAlign: "left",
                   }}
                 >
                   Click for details →
