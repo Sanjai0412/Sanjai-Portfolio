@@ -45,6 +45,13 @@ const NavBar = () => {
             <Nav.Link href="/#about">About</Nav.Link>
             <Nav.Link href="/#skills">Skills</Nav.Link>
             <Nav.Link href="/#projects">Projects</Nav.Link>
+            <Nav.Link
+              href="https://drive.google.com/file/d/1kBMwuz57xnhoQFyFNcyi1ksV6RABC941/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Resume
+            </Nav.Link>
             <Nav.Link href="/#achievements">Achievements</Nav.Link>
             <Nav.Link href="/#education">Education</Nav.Link>
           </Nav>
